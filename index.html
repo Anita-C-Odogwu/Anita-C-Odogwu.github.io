@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anita C Odogwu | Poetry</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -211,24 +211,12 @@ And fly into the sky, to learn new things</p>
         <button class="arrow" id="nextBtn">❯</button>
     </div>
 
-    <!-- Free Safe Comment System via GitHub Discussions -->
+    <!-- Free Account-Free Comment System Layout -->
     <div class="comments-section">
         <h3>Reader Guestbook & Comments</h3>
-        <script src="https://giscus.app"
-                data-repo="Anita-C-Odogwu/Anita-C-Odogwu.github.io"
-                data-repo-id="R_kgDONGqC_g"
-                data-category="Announcements"
-                data-category-id="DIC_kwDONGqC_s4CkWz7"
-                data-mapping="pathname"
-                data-strict="0"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="bottom"
-                data-theme="light"
-                data-lang="en"
-                crossorigin="anonymous"
-                async>
-        </script>
+        <div class="commentbox"></div>
+        <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+        <script>commentBox('5671183305408512-proj')</script>
     </div>
 
     <script>
