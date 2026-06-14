@@ -62,3 +62,12 @@ body {
     .arrow-btn { order: 2; margin: 15px 10px 0 10px; }
     .carousel-container { order: 1; height: 750px; }
 }
+
+/*THIS IS THE LATEST UPDATE*/
+
+/* Moves the poetry carousel arrows higher up */
+.carousel-btn, .prev, .next, .arrow { 
+    position: relative;
+    top: -200px; /* Adjust this number to move them higher (-) or lower (+) */
+    z-index: 10;
+}
