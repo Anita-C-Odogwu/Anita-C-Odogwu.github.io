@@ -68,13 +68,25 @@ body {
     .arrow-btn { 
         order: 2; 
         margin: 15px 10px 0 10px; 
-        transform: translateY(0px); /* Keeps arrows under the poem on mobile */
     }
 }
 
 /* Computer Layout Button Positioning Rules Only */
 @media (min-width: 769px) {
+    .carousel-wrapper {
+        position: relative; /* Sets up an anchor box for the buttons */
+    }
     .arrow-btn {
-        transform: translateY(-80px); /* Moves arrows higher up on computers */
+        position: absolute;
+        top: 30%; /* Sets exactly how high up the card they rest */
+        z-index: 5;
+    }
+    /* Moves the left button to the outer left boundary edge */
+    .arrow-btn:first-of-type {
+        left: -80px; 
+    }
+    /* Moves the right button to the outer right boundary edge */
+    .arrow-btn:last-of-type {
+        right: -80px;
     }
 }
