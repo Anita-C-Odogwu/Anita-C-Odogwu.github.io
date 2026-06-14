@@ -57,7 +57,15 @@ body {
 .ideas-trigger-btn:hover { background: #2c1a30; }
 .site-footer { text-align: center; padding: 20px; color: #f7d6c8; font-size: 0.9rem; margin-top: auto; }
 .warning-text { font-style: italic; font-size: 0.8rem; opacity: 0.75; margin-top: 4px; }
+/* Gives your poems side margins so text doesn't hit the arrows */
+.poem-body {
+    padding: 10px 60px !important; /* Adds extra blank space on left and right sides */
+}
+
 @media (max-width: 768px) {
+    .poem-body {
+        padding: 10px 20px !important; /* Brings text back to normal on small phone screens */
+    }
     .carousel-wrapper { 
         flex-wrap: wrap; 
     }
@@ -74,19 +82,19 @@ body {
 /* Computer Layout Button Positioning Rules Only */
 @media (min-width: 769px) {
     .carousel-wrapper {
-        position: relative; /* Sets up an anchor box for the buttons */
+        position: relative; /* Anchor point for your arrows */
     }
     .arrow-btn {
         position: absolute;
-        top: 30%; /* Sets exactly how high up the card they rest */
-        z-index: 5;
+        top: 45%; /* Centers them directly on the middle section of the cards */
+        z-index: 10;
     }
-    /* Moves the left button to the outer left boundary edge */
+    /* Places the left arrow neatly inside the left margin space */
     .arrow-btn:first-of-type {
-        left: -80px; 
+        left: 15px; 
     }
-    /* Moves the right button to the outer right boundary edge */
+    /* Places the right arrow neatly inside the right margin space */
     .arrow-btn:last-of-type {
-        right: -80px;
+        right: 15px;
     }
 }
