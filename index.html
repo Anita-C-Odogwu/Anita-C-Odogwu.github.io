@@ -423,5 +423,30 @@ That’s all that matters in this game.</p>
         window.speechSynthesis.speak(utterance);
     }
     </script>
+	    <!-- Your existing code layers -->
+    <script src="script.js"></script>
+
+    <!-- 1. Paste the button right here first -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- 2. Paste YOUR exact script code directly below it -->
+    <script>
+    const backToTopButton = document.getElementById("backToTop");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    backToTopButton.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+    </script>
 </body>
 </html>
