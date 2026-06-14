@@ -1,57 +1,64 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const poems = document.querySelectorAll(".poem-card");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    let currentIndex = 0;
-
-    if (poems.length === 0 || !prevBtn || !nextBtn) return;
-
-    function showPoem(nextIndex) {
-        poems[currentIndex].classList.remove("active");
-        currentIndex = (nextIndex + poems.length) % poems.length;
-        poems[currentIndex].classList.add("active");
-        
-        const innerBody = poems[currentIndex].querySelector(".poem-body");
-        if (innerBody) {
-            innerBody.scrollTop = 0;
-        }
-    }
-
-    prevBtn.addEventListener("click", () => showPoem(currentIndex - 1));
-    nextBtn.addEventListener("click", () => showPoem(currentIndex + 1));
-});
-/* ANITA'S LAYOUT PATCH - RE-LINKS YOUR STYLE SHEET */
-header {
-    text-align: center;
-    margin-bottom: 25px;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 25px 50px;
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    width: 100%;
-    max-width: 750px;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2c1a30 0%, #7a3b5c 40%, #d46a6a 80%, #f7d6c8 100%);
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; color: #2c1a30;
 }
-
-.slider-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 850px;
-    margin-bottom: 40px;
-    gap: 15px;
+.main-header { 
+    text-align: center; margin-bottom: 30px; background: rgba(255, 255, 255, 0.15);
+    padding: 20px 40px; border-radius: 30px; backdrop-filter: blur(8px); box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    width: 100%; max-width: 750px;
 }
-
-.poem-wrapper {
-    position: relative;
-    width: 100%;
-    height: 720px; /* Big card size */
-    overflow: hidden;
-    border-radius: 24px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
-    background: #fffcf7;
-    border: 1px solid rgba(255,255,255,0.4);
+.main-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.subtitle { font-size: 1.2rem; color: #f7d6c8; font-style: italic; }
+.header-feather { display: block; margin: 15px auto 0 auto; width: 55px; height: auto; filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2)); }
+.bio-box { background: rgba(255, 255, 255, 0.95); padding: 20px 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 750px; margin-bottom: 30px; text-align: center; }
+.bio-box h3 { font-family: 'Playfair Display', serif; color: #4a2333; margin-bottom: 8px; font-size: 1.3rem; }
+.bio-box p { font-size: 0.95rem; line-height: 1.6; color: #444; }
+.carousel-wrapper { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 750px; margin-bottom: 40px; }
+.carousel-container {
+    position: relative; width: 100%; height: 720px; overflow: hidden; border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25); background: #fffcf7; border: 1px solid rgba(255,255,255,0.5);
+}
+.poem-card {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 40px; display: flex; flex-direction: column;
+    opacity: 0; transform: scale(0.95); transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; pointer-events: none;
+}
+.poem-card.active { opacity: 1; transform: scale(1); pointer-events: auto; }
+.poem-title {
+    font-family: 'Playfair Display', serif; font-size: 2rem; color: #4a2333; margin-bottom: 20px;
+    text-align: center; border-bottom: 2px dashed #d46a6a; padding-bottom: 10px;
+}
+.poem-body {
+    font-family: 'Playfair Display', serif; font-size: 1.25rem; line-height: 2; color: #2b2024;
+    white-space: pre-line; text-align: center; overflow-y: auto; padding: 10px 20px; flex-grow: 1;
+}
+.poem-body::-webkit-scrollbar { width: 5px; }
+.poem-body::-webkit-scrollbar-thumb { background-color: #d46a6a; border-radius: 10px; }
+.comment-trigger-btn {
+    display: inline-block; margin: 25px auto 0 auto; background: #2c1a30; color: white; padding: 10px 25px; border-radius: 12px;
+    font-family: 'Poppins', sans-serif; font-weight: 600; text-decoration: none; font-size: 0.95rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: background 0.2s;
+}
+.comment-trigger-btn:hover { background: #7a3b5c; }
+.arrow-btn {
+    background: #2c1a30; border: none; color: #ffffff; width: 55px; height: 55px; border-radius: 50%; font-size: 1.6rem;
+    cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.2s ease; margin: 0 15px; flex-shrink: 0;
+}
+.arrow-btn:hover { background: #ffffff; color: #2c1a30; transform: scale(1.15); }
+.comments-wrapper { width: 100%; max-width: 750px; margin-bottom: 40px; }
+.action-box { background: rgba(255, 255, 255, 0.95); padding: 35px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.18); text-align: center; }
+.action-box h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; color: #4a2333; font-size: 1.5rem; }
+.section-desc { font-size: 0.9rem; color: #555; margin-bottom: 20px; line-height: 1.5; }
+.ideas-trigger-btn {
+    display: inline-block; background: #7a3b5c; color: white; padding: 12px 30px; border-radius: 12px;
+    font-family: 'Poppins', sans-serif; font-weight: 600; text-decoration: none; font-size: 1rem; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: background 0.2s;
+}
+.ideas-trigger-btn:hover { background: #2c1a30; }
+.site-footer { text-align: center; padding: 20px; color: #f7d6c8; font-size: 0.9rem; margin-top: auto; }
+.warning-text { font-style: italic; font-size: 0.8rem; opacity: 0.75; margin-top: 4px; }
+@media (max-width: 768px) {
+    .carousel-wrapper { flex-wrap: wrap; }
+    .arrow-btn { order: 2; margin: 15px 10px 0 10px; }
+    .carousel-container { order: 1; height: 750px; }
 }
