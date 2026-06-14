@@ -58,12 +58,23 @@ body {
 .site-footer { text-align: center; padding: 20px; color: #f7d6c8; font-size: 0.9rem; margin-top: auto; }
 .warning-text { font-style: italic; font-size: 0.8rem; opacity: 0.75; margin-top: 4px; }
 @media (max-width: 768px) {
-    .carousel-wrapper { flex-wrap: wrap; }
-    .arrow-btn { order: 2; margin: 15px 10px 0 10px; }
-    .carousel-container { order: 1; height: 750px; }
+    .carousel-wrapper { 
+        flex-wrap: wrap; 
+    }
+    .carousel-container { 
+        order: 1; 
+        height: 750px; 
+    }
+    .arrow-btn { 
+        order: 2; 
+        margin: 15px 10px 0 10px; 
+        transform: translateY(0px); /* Keeps arrows under the poem on mobile */
+    }
 }
 
-/* Moves your specific arrow buttons higher up */
-.arrow-btn {
-    transform: translateY(-80px);
+/* Computer Layout Button Positioning Rules Only */
+@media (min-width: 769px) {
+    .arrow-btn {
+        transform: translateY(-80px); /* Moves arrows higher up on computers */
+    }
 }
