@@ -57,41 +57,45 @@ body {
 .ideas-trigger-btn:hover { background: #2c1a30; }
 .site-footer { text-align: center; padding: 20px; color: #f7d6c8; font-size: 0.9rem; margin-top: auto; }
 .warning-text { font-style: italic; font-size: 0.8rem; opacity: 0.75; margin-top: 4px; }
-/* Computer Layout: Floats arrows beautifully over the text cards */
-@media (min-width: 769px) {
-    .carousel-wrapper {
-        position: relative; /* Sets up the anchor zone */
+/* Mobile Layout: Works perfectly on your Tecno Camon 11 */
+@media (max-width: 768px) {
+    .carousel-wrapper { 
+        display: flex !important;
+        flex-direction: row !important; /* Forces items to stay in a flat row layout */
+        flex-wrap: nowrap !important; /* Strictly forbids buttons from dropping to the bottom */
+        align-items: center !important;
+        justify-content: center !important;
     }
-    .arrow-btn {
-        position: absolute;
-        top: 40%; /* Adjusts exactly how high up the poems they float */
-        z-index: 100; /* Forces them to stay visible on top of text */
-        opacity: 0.8; /* Makes them slightly see-through so they look classy */
+    .carousel-container { 
+        height: 750px; 
+        flex-grow: 1;
     }
-    .arrow-btn:hover {
-        opacity: 1; /* Highlights them brightly when hovered */
-    }
-    /* Pins the left arrow cleanly inside the left text edge */
-    .arrow-btn:first-of-type {
-        left: 25px; 
-    }
-    /* Pins the right arrow cleanly inside the right text edge */
-    .arrow-btn:last-of-type {
-        right: 25px;
+    .arrow-btn { 
+        margin: 0 5px !important; 
+        width: 45px !important;  /* Makes arrows slightly smaller so they fit on mobile screens */
+        height: 45px !important;
+        font-size: 1.2rem !important;
     }
 }
 
-/* Mobile Layout: Leaves everything neat and safe for phones */
-@media (max-width: 768px) {
-    .carousel-wrapper { 
-        flex-wrap: wrap; 
+/* Computer Layout: Floats arrows over the text cards */
+@media (min-width: 769px) {
+    .carousel-wrapper {
+        position: relative; 
     }
-    .carousel-container { 
-        order: 1; 
-        height: 750px; 
+    .arrow-btn {
+        position: absolute;
+        top: 40%; 
+        z-index: 100; 
+        opacity: 0.8; 
     }
-    .arrow-btn { 
-        order: 2; 
-        margin: 15px 10px 0 10px; 
+    .arrow-btn:hover {
+        opacity: 1; 
+    }
+    .arrow-btn:first-of-type {
+        left: 25px; 
+    }
+    .arrow-btn:last-of-type {
+        right: 25px;
     }
 }
