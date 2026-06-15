@@ -4,7 +4,7 @@ body {
     background: linear-gradient(135deg, #2c1a30 0%, #7a3b5c 40%, #d46a6a 80%, #f7d6c8 100%);
     min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; color: #2c1a30;
 }
-.main-header { 
+.main-header {
     text-align: center; margin-bottom: 30px; background: rgba(255, 255, 255, 0.15);
     padding: 20px 40px; border-radius: 30px; backdrop-filter: blur(8px); box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     width: 100%; max-width: 750px;
