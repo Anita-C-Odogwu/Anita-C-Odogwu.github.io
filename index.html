@@ -19,13 +19,13 @@
     <style>
         .tts-container { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; border-bottom: 2px dashed #d46a6a; padding-bottom: 10px; }
         .poem-title { border-bottom: none !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
-        .audio-btn { background: #7a3b5c; color: white; border: none; padding: 6px 14px; border-radius: 20px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: background 0.2s; }
+        .audio-btn { background: #7a3b5c; color: white; border: none; padding: 6px 14px; border-radius: 20px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
         .audio-btn:hover { background: #2c1a30; }
     </style>
 </head>
 <body>
 
-    <!-- 1. Your new nav bar goes here first -->
+    <!-- Navigation Bar -->
     <nav class="top-nav">
         <a href="#about-me">About Me</a>
         <a href="#my-poems">My Poems</a>
@@ -36,7 +36,6 @@
     <header class="main-header">
         <h1>Anita C Odogwu</h1>
         <p class="subtitle">(Poetry Collection)</p>
-        <!-- Your Exact Feather Image Link -->
         <img src="https://i.postimg.cc/k5PKdrwZ/Screenshot-2026-06-14-6-55-30-PM.png" alt="Poetry Feather Badge" class="header-feather">
     </header>
 
@@ -45,38 +44,36 @@
         <h3>About The Poet</h3>
         <p>Welcome to my official creative writing space. I am an award-winning Sheffield poet dedicated to exploring history, identity, and culture through verse.</p>
         
-        <!-- 🌟 THE HIDDEN BIOGRAPHY EXTENSION START 🌟 -->
+        <!-- Hidden Biography Extension -->
         <div id="extended-bio" style="display: none; margin-top: 15px;">
-            <p>Anita C. Odogwu is an award-winning Black British poet and performer based in Sheffield, South Yorkshire, whose writing deeply explores identity, culture, and her rich heritage. Born and raised in Lagos State, Nigeria, she spent her formative years at Lea Valley School before relocating to England at the age of ten. After completing her primary education at Carfield Community Primary School, Anita transitioned to All Saints Catholic High School, where her distinct literary talent quickly gained recognition.As a Year 7 student, her poetic voice emerged with striking clarity when she claimed both Gold and Silver medals in the prestigious Sheffield Young Poets Award Competition. Sweeping the Key Stage 3 category with her moving entries, "Black? British? Both?" and "My History Is My Pride," Anita highlighted a sophisticated grasp of history and identity well beyond her years.A celebrated voice within the community, Anita continues to represent the next generation of creative talent in South Yorkshire, recently returning to Sheffield Town Hall by special invitation to perform her acclaimed poetry in person. Supported by her parents, Mr. Kingsley A. Odogwu and Mrs. Anita I. Odogwu, her work serves as a powerful testament to the beauty of celebrating one's roots.
-				[The poems are available to read below.]</p>
-			            <!-- 📸 BALANCED 2x2 SQUARE GALLERY MATRIX START 📸 -->
+            <p>Anita C. Odogwu is an award-winning Black British poet and performer based in Sheffield, South Yorkshire, whose writing deeply explores identity, culture, and her rich heritage. Born to Nigerian parents, Anita's unique perspective as a second-generation immigrant informs much of her work. The poems are available to read below.</p>
+            
+            <!-- 2x2 Gallery Matrix -->
             <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 25px; width: 100%;">
                 
-                <!-- ROW 1: First Two Ceremony Photos Side-By-Side -->
+                <!-- ROW 1: First Two Ceremony Photos -->
                 <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; width: 100%;">
-                    <img src="ceremony-1.jpg" onerror="this.src='Ceremony-1.jpg'" alt="Anita C. Odogwu Poetry Profile" style="width: 100%; max-width: 220px; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                    <img src="ceremony-2.jpg" onerror="this.src='Ceremony-2.jpg'" alt="Anita C. Odogwu Award Ceremony" style="width: 100%; max-width: 220px; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    <img src="ceremony-1.jpg" onerror="this.src='Ceremony-1.jpg'" alt="Anita C. Odogwu Poetry Profile" style="width: 100%; max-width: 220px; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px;">
+                    <img src="ceremony-2.jpg" onerror="this.src='Ceremony-2.jpg'" alt="Anita C. Odogwu Award Ceremony" style="width: 100%; max-width: 220px; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px;">
                 </div>
 
-                <!-- ROW 2: Last Two Ceremony Photos Side-By-Side Underneath -->
+                <!-- ROW 2: Last Two Ceremony Photos -->
                 <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; width: 100%;">
-                    <img src="ceremony-3.jpg" onerror="this.src='Ceremony-3.jpg'" alt="Anita C. Odogwu with Lord Mayor of Sheffield" style="width: 100%; max-width: 220px; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-                    <img src="ceremony-4.jpg" onerror="this.src='Ceremony-4.jpg'" alt="Anita C. Odogwu Celebration Event" style="width: 100%; max-width: 220px; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    <img src="ceremony-3.jpg" onerror="this.src='Ceremony-3.jpg'" alt="Anita C. Odogwu with Lord Mayor" style="width: 100%; max-width: 220px; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px;">
+                    <img src="ceremony-4.jpg" onerror="this.src='Ceremony-4.jpg'" alt="Anita C. Odogwu Celebration" style="width: 100%; max-width: 220px; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px;">
                 </div>
 
             </div>
-            <!-- 📸 BALANCED 2x2 SQUARE GALLERY MATRIX END 📸 -->
 
         </div>
-        <!-- 🌟 THE HIDDEN BIOGRAPHY EXTENSION END 🌟 -->
 
-        <!-- The Clickable Toggle Button -->
-        <button id="bioToggleBtn" onclick="toggleBio()" style="background: none; border: none; color: #7a3b5c; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.95rem; cursor: pointer; margin-top: 15px; text-decoration: underline;">Read Full Bio ▾</button>
+        <!-- Toggle Button -->
+        <button id="bioToggleBtn" onclick="toggleBio()" style="background: none; border: none; color: #7a3b5c; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.95rem; cursor: pointer; text-decoration: underline;">Read Full Bio ▾</button>
     </section>
 
-    <!-- Big Centred Cards Container Slider Framework -->
+    <!-- Poems Carousel -->
     <div id="my-poems" class="carousel-wrapper">
-        <!-- YOUR INTERACTIVE LEFT ARROW BUTTON -->
+        <!-- Left Arrow Button -->
         <button id="prevBtn" class="arrow-btn" aria-label="Previous Poem">❮</button>
         
         <div class="carousel-container">
@@ -94,40 +91,40 @@ Being half is not enough,
 And it will never be that much.
 Why
 Why
-Why can’t I be like everyone else,
-‘Where are you from?’ is a bad question
-‘What race are you?’ is even worse,
+Why can't I be like everyone else,
+'Where are you from?' is a bad question
+'What race are you?' is even worse,
 Answering those will be like hell.
 Why
 Why
-Why can’t I just be one?
-If you ask; ‘Am I black?’
-I’ll say no,
-If you ask; ‘Am I white?’, it’ll be the same
+Why can't I just be one?
+If you ask; 'Am I black?'
+I'll say no,
+If you ask; 'Am I white?', it'll be the same
 Why
 Why
 Why is it so complicated?
-Is it that I’m cursed?
+Is it that I'm cursed?
 Or am I blessed?
 Just having to pick one is hard.
 Why
 Why
 Why
-Why can’t I be like everyone else?
+Why can't I be like everyone else?
 To know that there was one place I truly belonged
 To be able to find peace, not be discriminated or judged
 Is a miracle for people like me.
 Why
 Why
-Why can’t I look the same,
+Why can't I look the same,
 Hair, Skin and face,
 Why one big long name?
 I feel like a string being wound up along the finger.
 Why
 Why
-Why can’t I be like everyone else,
-‘Where are you from?’ is a bad question
-‘What race are you?’ is even worse,
+Why can't I be like everyone else,
+'Where are you from?' is a bad question
+'What race are you?' is even worse,
 Answering those will be like hell.
 Why
 Why
@@ -135,9 +132,7 @@ Black, British, or both?
 I guess I will never know…
 Being half is not enough,
 And it will never be that much.</p>
-                    
-                    <!-- Your Exact Comments Form Link -->
-                    <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
+                    <a href="https://forms.gle/SNFbLCS8TceoYxSm7" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
                 </div>
             </article>
 
@@ -148,7 +143,7 @@ And it will never be that much.</p>
                     <button class="audio-btn" onclick="speakPoem(this)">🔊 Listen</button>
                 </div>
                 <div class="poem-body">
-                    <p>Home isn’t just where you live.
+                    <p>Home isn't just where you live.
 It is your story.
 It is your history.
 
@@ -168,14 +163,14 @@ Actually take a step.
 
 But
 Only a few undeniable souls.
-‘Say’ that something should be done,
-And then ‘do’ it.
+'Say' that something should be done,
+And then 'do' it.
 Only a few undeniable souls…
 Change the world.
 
 But
 
-It’s not for themselves,
+It's not for themselves,
 Or the current generation,
 But for the future ones.
 The ones that can change tomorrow.
@@ -189,8 +184,7 @@ Those undeniable souls.
 And that can be you.
 But
 Only if you choose so.</p>
-                    <!-- Your Exact Comments Form Link -->
-                    <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
+                    <a href="https://forms.gle/SNFbLCS8TceoYxSm7" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
                 </div>
             </article>
 
@@ -236,10 +230,10 @@ And now in a new age,
 I would leave my cage,
 And spread my wings
 And fly into the sky, to learn new things</p>
-                    <!-- Your Exact Comments Form Link -->
-                    <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
+                    <a href="https://forms.gle/SNFbLCS8TceoYxSm7" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
                 </div>
             </article>
+
             <!-- CARD 4 -->
             <article class="poem-card">
                 <div class="tts-container">
@@ -247,7 +241,7 @@ And fly into the sky, to learn new things</p>
                     <button class="audio-btn" onclick="speakPoem(this)">🔊 Listen</button>
                 </div>
                 <div class="poem-body">
-                    <p>Mama once said ‘if you are smart you are strong’.
+                    <p>Mama once said 'if you are smart you are strong'.
 I was smart, I was strong.
 There was a day,
 The birds did not sing their morning song.
@@ -258,7 +252,7 @@ A tall dark figure,
 With no face or name,
 But hollow holes for eyes,
 Hollow bottomless pits.
-But when it spoke, it’s voice, 
+But when it spoke, it's voice, 
 Was not only one voice,
 But a series of screams,
 Crushed under a growl,
@@ -267,16 +261,16 @@ That felt like a dying fowl.
 The figure asked me my name.
 It seemed tame, 
 But had an aura so poisonous, 
-That a bird nearby dropped from It’s tree.
+That a bird nearby dropped from It's tree.
 So i replied, with my most charming smile-
-‘Onwumbiko.’
+'Onwumbiko.'
 Meaning "Death, I implore you"
 
 The figure's mouth twisted into a sneer,
-‘Why?’ he growled, and i grinned,
-‘I shall make you a throne.
-Someone as great as you shouldn’t have to stand while you make me suffer.
-I will create a throne befitting your shadow.’ I reply
+'Why?' he growled, and i grinned,
+'I shall make you a throne.
+Someone as great as you shouldn't have to stand while you make me suffer.
+I will create a throne befitting your shadow.' I reply
 The figure smiles condescending.
 
 So I went away,
@@ -299,12 +293,10 @@ Of my own telling,
 And that is how Onwumbiko,
 Cheated.
    The.
-    	One.
-		Who.
-			Cheated.
-					Others.</p>
-                    <!-- Your Exact Comments Form Link -->
-                    <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
+    One.
+ Cheated.
+ Others.</p>
+                    <a href="https://forms.gle/SNFbLCS8TceoYxSm7" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
                 </div>
             </article>
 
@@ -327,8 +319,8 @@ The hours fly past, no sign of devout.
 The snow comes,
 Cold and biting, and scorching your lungs
 
-Then it’s gone,
-Now we’re gone,
+Then it's gone,
+Now we're gone,
 We were once here,
 Now, never again.
 
@@ -347,9 +339,8 @@ Even if it goes,
 We know it came.
 
 And for me,
-That’s all that matters in this game.</p>
-                    <!-- Your Exact Comments Form Link -->
-                    <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
+That's all that matters in this game.</p>
+                    <a href="https://forms.gle/SNFbLCS8TceoYxSm7" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
                 </div>
             </article>
 
@@ -360,7 +351,12 @@ That’s all that matters in this game.</p>
                     <button class="audio-btn" onclick="speakPoem(this)">🔊 Listen</button>
                 </div>
                 <div class="poem-body">
-                    <p><!-- CARD 6 -->
+                    <p>Coming soon - New stories about resilience and recovery</p>
+                    <a href="https://forms.gle/SNFbLCS8TceoYxSm7" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
+                </div>
+            </article>
+
+            <!-- CARD 7 -->
             <article class="poem-card">
                 <div class="tts-container">
                     <h2 class="poem-title">Upcoming</h2>
@@ -368,60 +364,52 @@ That’s all that matters in this game.</p>
                 </div>
                 <div class="poem-body">
                     <p>New Chapters, New Stories</p>
-                    <!-- Your Exact Comments Form Link -->
-                    <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
+                    <a href="https://forms.gle/SNFbLCS8TceoYxSm7" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
                 </div>
             </article>
-            
-        </div></p>
-                    <!-- Your Exact Comments Form Link -->
-                    <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
-                </div>
-            </article>
-            
-        </div>
-		<!-- CARD 7 -->
+
+            <!-- CARD 8 - BLANK CARD FOR NEW POEM -->
             <article class="poem-card">
                 <div class="tts-container">
-                    <h2 class="poem-title">Upcoming</h2>
+                    <h2 class="poem-title">Your New Poem Title Here</h2>
                     <button class="audio-btn" onclick="speakPoem(this)">🔊 Listen</button>
                 </div>
                 <div class="poem-body">
-                    <p>New Chapters, New Stories</p>
-                    <!-- Your Exact Comments Form Link -->
-                    <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
+                    <p>Your poem text goes here. Just replace this text with your new poem!</p>
+                    <a href="https://forms.gle/SNFbLCS8TceoYxSm7" target="_blank" class="comment-trigger-btn">💬 Comment on this Poem</a>
                 </div>
             </article>
             
         </div>
-        <!-- YOUR INTERACTIVE RIGHT ARROW BUTTON -->
+
+        <!-- Right Arrow Button -->
         <button id="nextBtn" class="arrow-btn" aria-label="Next Poem">❯</button>
     </div>
 
-    <!-- Global Public Ideas Box & Spreadsheet Activity Feed Stream -->
+    <!-- Comments & Ideas Section -->
     <section id="comment-feed" class="comments-wrapper">
         <div class="action-box">
             <h3>Submit Poetry Ideas</h3>
             <p class="section-desc">Have a theme, topic, or story you want me to write about next? Drop your prompts below!</p>
-            <!-- Your Exact Poetry Ideas Form Link -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd4PGy4jq4mjKLoNkPKowGCLQZymOaePaDzmGJj6Si0Fy38ag/viewform?usp=sharing&ouid=104670365152212322221" target="_blank" class="ideas-trigger-btn">💡 Submit a Poetry Idea</a>
+            <a href="https://forms.gle/nzGoT9SRGxYj8Dmu5" target="_blank" class="ideas-trigger-btn">💭 Suggest a Topic</a>
             
-            <!-- Your Exact Public Google Spreadsheet Shared Link Embedded -->
             <h4 style="font-family: 'Playfair Display', serif; color: #4a2333; margin-top: 35px; margin-bottom: 10px; font-size: 1.25rem;">Live Shared Feed Log</h4>
-            <!-- Your Live Log Window -->
-            <iframe src="https://docs.google.com/spreadsheets/d/1K4iB2vth_ZrmW4388-z8HMIV_1n_C-yU87Ql4LnlmEs/preview" width="100%" height="450" style="border:2px solid #4a2333; border-radius: 8px;"></iframe>
+            <iframe src="https://docs.google.com/spreadsheets/d/1K4iB2vth_ZrmW4388-z8HMIV_1n_C-yU87Ql4LnlmEs/edit?usp=sharing" width="100%" height="450" style="border:2px solid #4a2333; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></iframe>
         </div>
     </section>
 
-    <!-- HERE IS YOUR OFFICIAL PROTECTIVE COPYRIGHT FOOTER -->
+    <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; 2026 Anita C Odogwu. All Rights Reserved.</p>
         <p class="warning-text">No part of this poetry collection may be copied or reproduced without permission.</p>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Scripts -->
     <script src="script.js"></script>
     
-    <!-- Interactive Logic Scripts Container -->
     <script>
     function toggleBio() {
         var extendedBio = document.getElementById("extended-bio");
@@ -435,47 +423,30 @@ That’s all that matters in this game.</p>
         }
     }
 
-    // 🔊 Smart Text-To-Speech Logic Controller Function
     function speakPoem(button) {
-        // If voice is already speaking, turn it off instantly
         if (window.speechSynthesis.speaking) {
             window.speechSynthesis.cancel();
-            
-            // Turn all audio button labels back to Listen
             document.querySelectorAll('.audio-btn').forEach(btn => btn.innerHTML = "🔊 Listen");
             return;
         }
 
-        // Locate the matching paragraph text block inside the active card
         var card = button.closest('.poem-card');
         var textToRead = card.querySelector('.poem-body p').innerText;
         var titleToRead = card.querySelector('.poem-title').innerText;
-
-        // Set up the voice line content sequence
         var utterance = new SpeechSynthesisUtterance(titleToRead + ". " + textToRead);
         
-        // Adjust standard line speech properties
-        utterance.rate = 0.95; // Slightly slower pacing for expressive speech reading
-        utterance.pitch = 1.0; 
+        utterance.rate = 0.75;
+        utterance.pitch = 0.95;
+        utterance.volume = 1.0;
 
-        // Update button visual trigger when speech finishes reading
         utterance.onend = function() {
             button.innerHTML = "🔊 Listen";
         };
 
-        // Initialize voice engine execution commands
         button.innerHTML = "🛑 Stop";
         window.speechSynthesis.speak(utterance);
     }
-    </script>
-	    <!-- Your existing code layers -->
-    <script src="script.js"></script>
 
-    <!-- 1. Paste the button right here first -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
-
-    <!-- 2. Paste YOUR exact script code directly below it -->
-    <script>
     const backToTopButton = document.getElementById("backToTop");
 
     window.onscroll = function () {
