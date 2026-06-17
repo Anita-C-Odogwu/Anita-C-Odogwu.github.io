@@ -3,33 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anita C Odogwu | Poetry Collection</title>
+    <title>Anita C Odogwu | Art Gallery</title>
     
-    <!-- Google Fonts Links: Cinzel & Lora -->
+    <!-- Google Fonts Links: Cinzel, Lora, & Poppins -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Cinzel:wght@600;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Your Exact Feather Shortcut Icon Link -->
+    <!-- Feather Shortcut Icon Link -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/k5PKdrwZ/Screenshot-2026-06-14-6-55-30-PM.png">
     
     <link rel="stylesheet" href="style.css">
     
-    <!-- Text to Speech Button Layout Styling -->
+    <!-- Gallery Grid Specific Layout Styling -->
     <style>
-        .tts-container { display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px; border-bottom: 2px dashed #d46a6a; padding-bottom: 10px; }
-        .poem-title { border-bottom: none !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
-        .audio-btn { background: #7a3b5c; color: white; border: none; padding: 6px 14px; border-radius: 20px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
-        .audio-btn:hover { background: #2c1a30; }
+        .gallery-section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; text-align: center; }
+        .gallery-title { font-family: 'Cinzel', serif; color: #7a3b5c; margin-bottom: 30px; font-size: 2.5rem; }
+        .gallery-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 20px; }
+        .art-card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 400px; width: 100%; border: 1px solid #f0e6eb; }
+        .art-card img { width: 100%; height: auto; border-radius: 4px; display: block; }
+        .art-card h3 { font-family: 'Cinzel', serif; color: #2c1a30; font-size: 1.2rem; margin: 15px 0 5px 0; }
+        .art-card p { font-family: 'Lora', serif; color: #666; font-size: 0.95rem; font-style: italic; margin: 0; }
+        .back-home { margin-top: 40px; display: inline-block; background: #7a3b5c; color: white; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-family: 'Poppins', sans-serif; font-size: 0.9rem; transition: background 0.2s; }
+        .back-home:hover { background: #2c1a30; }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar (Keeps your links identical across pages) -->
     <nav class="top-nav">
-        <a href="#about-me">About Me</a>
-        <a href="#my-poems">My Poems</a>
-        <a href="#comment-feed">Live Feed</a>
-        <a href="#contact-booking">Bookings</a>
+        <a href="index.html#about-me">About Me</a>
+        <a href="index.html#my-poems">My Poems</a>
+        <a href="index.html#comment-feed">Live Feed</a>
+        <a href="index.html#contact-booking">Bookings</a>
         <a href="gallery.html">Art Gallery</a>
     </nav>
+
+    <!-- Main Gallery Section -->
+    <section class="gallery-section">
+        <h1 class="gallery-title">My Charcoal Portraits</h1>
+        
+        <div class="gallery-grid">
+            
+            <!-- Card 1: Audrey Hepburn -->
+            <div class="art-card">
+                <!-- Swap 'images/audrey.jpg' with your real image path later -->
+                <img src="images/audrey.jpg" alt="Charcoal portrait of Audrey Hepburn">
+                <h3>Audrey Hepburn</h3>
+                <p>Medium Charcoal and Blending Stump on Paper</p>
+            </div>
+
+            <!-- Card 2: Chadwick Boseman -->
+            <div class="art-card">
+                <!-- Swap 'images/chadwick.jpg' with your real image path later -->
+                <img src="images/chadwick.jpg" alt="Charcoal portrait of Chadwick Boseman">
+                <h3>Chadwick Boseman</h3>
+                <p>Medium Charcoal with High-Contrast Studio Lighting</p>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="back-home">← Back to Poetry Collection</a>
+    </section>
+
+</body>
+</html>
