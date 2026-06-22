@@ -20,7 +20,7 @@
         .gallery-section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; text-align: center; }
         .gallery-title { font-family: 'Cinzel', serif; color: #7a3b5c; margin-bottom: 30px; font-size: 2.5rem; }
         .gallery-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 20px; }
-        .art-card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 400px; width: 100%; border: 1px solid #f0e6eb; }
+        .art-card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 400px; width: 100%; border: 1px solid #f0e6eb; display: flex; flex-direction: column; justify-content: space-between; }
         .art-card img { width: 100%; height: auto; border-radius: 4px; display: block; }
         .art-card h3 { font-family: 'Cinzel', serif; color: #2c1a30; font-size: 1.2rem; margin: 15px 0 5px 0; }
         .art-card p { font-family: 'Lora', serif; color: #666; font-size: 0.95rem; font-style: italic; margin: 0; }
@@ -109,8 +109,9 @@
                 <h3>Chadwick Boseman</h3>
                 <p>Graphite with High-Contrast Studio Lighting</p>
             </div>
-
             <!-- Card 3: The Rose -->
+            <div class="art-card">
+                <div class="comparison-container">
                     <div class="image-box">
                         <img src="rose.jpg" alt="Graphite drawing of a rose">
                         <div class="image-label">Sketch</div>
@@ -137,7 +138,9 @@
             </div>
             
             <!-- Card 5: The Cherries -->
-            <div class="image-box">
+            <div class="art-card">
+                <div class="comparison-container">
+                    <div class="image-box">
                         <img src="cherries.jpg" alt="Oil pencil drawing of a pair of cherries">
                         <div class="image-label">Sketch</div>
                     </div>
@@ -147,6 +150,8 @@
             </div>
 
             <!-- Card 6: Praying Hands -->
+            <div class="art-card">
+                <div class="comparison-container">
                     <div class="image-box">
                         <img src="hands.jpg" alt="Oil pencil drawing of praying hands">
                         <div class="image-label">Sketch</div>
@@ -157,6 +162,8 @@
             </div>
 
             <!-- Card 7: Surreal Hand -->
+            <div class="art-card">
+                <div class="comparison-container">
                     <div class="image-box">
                         <img src="hand.jpg" alt="Surreal graphite drawing of a palm with branches for lines">
                         <div class="image-label">Sketch</div>
@@ -198,9 +205,8 @@
                 <p>Medium used / artwork descriptions here</p>
             </div>
             
-        <a href="https://forms.gle/Ah9tz4hYfQwhcbgY7" target="_blank" class="comment-trigger-btn">💬 Comment on my art. Or leave a suggestion below!</a>
+            <a href="https://forms.gle/Ah9tz4hYfQwhcbgY7" target="_blank" class="comment-trigger-btn">💬 Comment on my art. Or leave a suggestion below!</a>
 
-            
         </div>
 
         <br>
