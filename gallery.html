@@ -10,17 +10,16 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
  
-    <!-- Feather Shortcut Icon Link -->
-    <link rel="icon" type="image/png" href="image/png" href="https://i.postimg.cc/k5PKdrwZ/Screenshot-2026-06-14-6-55-30-PM.png">
+    <!-- Fixed Glowing Feather Favicon Direct Link -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/k5PKdrwZ/Screenshot-2026-06-14-6-55-30-PM.png">
     
     <link rel="stylesheet" href="style.css">
     
     <!-- Gallery Grid Specific Layout Styling -->
     <style>
-        /* Forces the main container out of the narrow central tube */
         .gallery-section { 
             padding: 40px 20px; 
-            max-width: 1200px !important; /* Opens up the page width */
+            max-width: 1200px !important; 
             width: 90% !important;
             margin: 0 auto; 
             text-align: center; 
@@ -28,16 +27,17 @@
         }
         .gallery-title { font-family: 'Cinzel', serif; color: #7a3b5c; margin-bottom: 30px; font-size: 2.5rem; }
         
-        /* Clean responsive layout columns across the screen space */
+        /* align-items: start fixes the vertical card stretching */
         .gallery-grid { 
             display: grid !important;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
             gap: 30px !important;
             width: 100% !important;
             margin-top: 20px !important;
+            align-items: start !important; 
         }
         
-        /* Art Card structure: removes tight width constraints */
+        /* Individual Art Card Container */
         .art-card { 
             background: #fff !important; 
             padding: 18px !important; 
@@ -52,12 +52,11 @@
             text-align: center;
         }
         
-        /* Lets your linework grow naturally without weird horizontal cropping */
         .art-card img { 
             width: 100% !important; 
             height: auto !important; 
-            max-height: 400px !important; /* Keeps taller images under control safely */
-            object-fit: contain !important; /* Displays the drawing fully without squishing */
+            max-height: 400px !important; 
+            object-fit: contain !important; 
             border-radius: 4px !important; 
             display: block !important; 
             cursor: pointer !important;
@@ -105,7 +104,7 @@
             pointer-events: none !important;
         }
 
-        /* Lightbox modal zoom viewing platform rules */
+        /* Lightbox pop-up Modal overlay */
         .lightbox-overlay {
             position: fixed !important;
             z-index: 9999 !important;
@@ -282,27 +281,11 @@
                 <h3>Mercy Chinwo</h3>
                 <p>Graphite and Fine Shading with Embellished Details</p>
             </div>
-
-            <!-- FUTURE ARTWORK TEMPLATE CARD -->
-            <div class="art-card">
-                <div class="comparison-container">
-                    <div class="image-box">
-                        <img src="NEW-REFERENCE.jpg" alt="Reference Photo Description" class="zoomable">
-                        <div class="image-label">Ref</div>
-                    </div>
-                    <div class="image-box">
-                        <img src="NEW-SKETCH.jpg" alt="Sketch Description" class="zoomable">
-                        <div class="image-label">Sketch</div>
-                    </div>
-                </div>
-                <h3>New Artwork Title</h3>
-                <p>Medium used / artwork descriptions here</p>
-            </div>
             
         </div>
 
         <br>
-        <a href="https://forms.gle" target="_blank" class="back-home">💬 Comment on my art</a>
+        <a href="https://forms.gle" target="_blank" class="comment-trigger-btn">💬 Comment on my art</a>
         <br><br>
         <a href="index.html" class="back-home">← Back to Poetry Collection</a>
     </section>
@@ -319,7 +302,6 @@
         const closeBtn = document.getElementById('close-btn');
         const zoomableImages = document.querySelectorAll('.zoomable');
 
-        // Loop through all images to add click/tap listening triggers
         zoomableImages.forEach(image => {
             image.addEventListener('click', () => {
                 lightboxImg.src = image.src;
@@ -328,12 +310,10 @@
             });
         });
 
-        // Tap the X close button to dismiss full-screen modal preview
         closeBtn.addEventListener('click', () => {
             lightbox.classList.remove('active');
         });
 
-        // Tap anywhere on the dark background color overlay block to exit view
         lightbox.addEventListener('click', (e) => {
             if (e.target !== lightboxImg) {
                 lightbox.classList.remove('active');
