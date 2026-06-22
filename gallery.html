@@ -17,11 +17,39 @@
     
     <!-- Gallery Grid Specific Layout Styling -->
     <style>
-        .gallery-section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; text-align: center; }
+        .gallery-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
         .gallery-title { font-family: 'Cinzel', serif; color: #7a3b5c; margin-bottom: 30px; font-size: 2.5rem; }
-        .gallery-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 20px; }
-        .art-card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 400px; width: 100%; border: 1px solid #f0e6eb; display: flex; flex-direction: column; justify-content: space-between; }
-        .art-card img { width: 100%; height: auto; border-radius: 4px; display: block; }
+        
+        /* Fixed Grid Setup: Prevents infinite vertical stretching */
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+            margin-top: 20px; 
+            align-items: start;
+        }
+        
+        /* Card Containers */
+        .art-card { 
+            background: #fff; 
+            padding: 15px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            border: 1px solid #f0e6eb; 
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        
+        /* Cropping and Containing Image Sizes Uniformly */
+        .art-card img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 4px; 
+            display: block; 
+        }
+        
         .art-card h3 { font-family: 'Cinzel', serif; color: #2c1a30; font-size: 1.2rem; margin: 15px 0 5px 0; }
         .art-card p { font-family: 'Lora', serif; color: #666; font-size: 0.95rem; font-style: italic; margin: 0; }
         .back-home { margin-top: 40px; display: inline-block; background: #7a3b5c; color: white; padding: 8px 20px; border-radius: 20px; text-decoration: none; font-family: 'Poppins', sans-serif; font-size: 0.9rem; transition: background 0.2s; }
@@ -35,17 +63,19 @@
             display: flex;
             gap: 10px;
             margin-bottom: 5px;
+            height: 200px;
         }
         .image-box {
             position: relative;
             flex: 1;
+            height: 100%;
             overflow: hidden;
         }
         .image-label {
             position: absolute;
             bottom: 6px;
             left: 6px;
-            background: rgba(44, 26, 48, 0.75); /* Matches your dark plum color #2c1a30 */
+            background: rgba(44, 26, 48, 0.75);
             color: #fff;
             padding: 3px 6px;
             font-size: 10px;
@@ -53,10 +83,15 @@
             border-radius: 3px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            z-index: 10;
         }
         @media (max-width: 480px) {
             .comparison-container {
-                flex-direction: column; /* Stacks images vertically on small mobile displays */
+                flex-direction: column;
+                height: auto;
+            }
+            .art-card img {
+                height: 180px;
             }
         }
     </style>
@@ -189,7 +224,7 @@
                 <p>Graphite and Fine Shading with Embellished Details</p>
             </div>
 
-            <!-- FUTURE ARTWORK TEMPLATE CARD (Copy & Paste this whenever you make a new piece!) -->
+            <!-- FUTURE ARTWORK TEMPLATE CARD -->
             <div class="art-card">
                 <div class="comparison-container">
                     <div class="image-box">
@@ -205,11 +240,11 @@
                 <p>Medium used / artwork descriptions here</p>
             </div>
             
-            <a href="https://forms.gle/Ah9tz4hYfQwhcbgY7" target="_blank" class="comment-trigger-btn">💬 Comment on my art. Or leave a suggestion below!</a>
-
         </div>
 
         <br>
+        <a href="https://forms.gle" target="_blank" class="back-home">💬 Comment on my art</a>
+        <br><br>
         <a href="index.html" class="back-home">← Back to Poetry Collection</a>
     </section>
 
