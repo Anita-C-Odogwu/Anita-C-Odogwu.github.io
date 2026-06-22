@@ -11,7 +11,7 @@
     <link href="https://googleapis.com" rel="stylesheet">
  
     <!-- Feather Shortcut Icon Link -->
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/k5PKdrwZ/Screenshot-2026-06-14-6-55-30-PM.png">
+    <link rel="icon" type="image/png" href="https://postimg.cc">
     
     <link rel="stylesheet" href="style.css">
     
@@ -29,6 +29,36 @@
         
         /* Footer Styling */
         footer { margin-top: 60px; text-align: center; padding: 20px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: #fff; border-top: 1px dashed rgba(255,255,255,0.2); }
+
+        /* Side-by-Side Comparison Styling */
+        .comparison-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+        .image-box {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+        }
+        .image-label {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+            background: rgba(44, 26, 48, 0.75); /* Matches your dark plum color #2c1a30 */
+            color: #fff;
+            padding: 3px 6px;
+            font-size: 10px;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        @media (max-width: 480px) {
+            .comparison-container {
+                flex-direction: column; /* Stacks images vertically on small mobile displays */
+            }
+        }
     </style>
 </head>
 <body>
@@ -50,60 +80,148 @@
             
             <!-- Card 1: Audrey Hepburn -->
             <div class="art-card">
-                <img src="audrey.jpg" alt="Portrait of Audrey Hepburn">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="audrey-ref.jpg" alt="Audrey Hepburn Reference Photo">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="audrey.jpg" alt="Portrait of Audrey Hepburn">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
                 <h3>Audrey Hepburn</h3>
                 <p>Graphite and Blending Stump on Paper</p>
             </div>
 
             <!-- Card 2: Chadwick Boseman -->
             <div class="art-card">
-                <img src="chadwick.jpg" alt="Portrait of Chadwick Boseman">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="chadwick-ref.jpg" alt="Chadwick Boseman Reference Photo">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="chadwick.jpg" alt="Portrait of Chadwick Boseman">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
                 <h3>Chadwick Boseman</h3>
                 <p>Graphite with High-Contrast Studio Lighting</p>
             </div>
 
             <!-- Card 3: The Rose -->
             <div class="art-card">
-                <img src="rose.jpg" alt="Graphite drawing of a rose">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="rose-ref.jpg" alt="Rose Reference Photo">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="rose.jpg" alt="Graphite drawing of a rose">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
                 <h3>The Rose</h3>
                 <p>Graphite Shading with Natural Textures</p>
             </div>
 
             <!-- Card 4: Martin Luther King Jr. -->
             <div class="art-card">
-                <img src="mlk.jpg" alt="Graphite portrait of Martin Luther King Jr.">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="mlk-ref.jpg" alt="Martin Luther King Jr. Reference Photo">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="mlk.jpg" alt="Graphite portrait of Martin Luther King Jr.">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
                 <h3>Martin Luther King Jr.</h3>
                 <p>Graphite and Blending Stump Portrait</p>
             </div>
             
             <!-- Card 5: The Cherries -->
             <div class="art-card">
-                <img src="cherries.jpg" alt="Oil pencil drawing of a pair of cherries">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="cherries-ref.jpg" alt="Cherries Reference Photo">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="cherries.jpg" alt="Oil pencil drawing of a pair of cherries">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
                 <h3>Cherries</h3>
                 <p>Oil Pencil Blending on Paper</p>
             </div>
 
             <!-- Card 6: Praying Hands -->
             <div class="art-card">
-                <img src="hands.jpg" alt="Oil pencil drawing of praying hands">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="hands-ref.jpg" alt="Praying Hands Reference Photo">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="hands.jpg" alt="Oil pencil drawing of praying hands">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
                 <h3>Praying Hands</h3>
                 <p>Oil Pencil on Paper</p>
             </div>
 
             <!-- Card 7: Surreal Hand -->
             <div class="art-card">
-                <img src="hand.jpg" alt="Surreal graphite drawing of a palm with branches for lines">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="hand-ref.jpg" alt="Surreal Hand Reference Photo">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="hand.jpg" alt="Surreal graphite drawing of a palm with branches for lines">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
                 <h3>Surreal Hand</h3>
                 <p>Graphite and Fine Shading with Conceptual Detail</p>
             </div>
 
             <!-- Card 8: Mercy Chinwo -->
             <div class="art-card">
-                <img src="mercy.jpg" alt="Graphite portrait of Mercy Chinwo">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="mercy-ref.jpg" alt="Mercy Chinwo Reference Photo">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="mercy.jpg" alt="Graphite portrait of Mercy Chinwo">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
                 <h3>Mercy Chinwo</h3>
                 <p>Graphite and Fine Shading with Embellished Details</p>
             </div>
 
+            <!-- FUTURE ARTWORK TEMPLATE CARD (Copy & Paste this whenever you make a new piece!) -->
+            <div class="art-card">
+                <div class="comparison-container">
+                    <div class="image-box">
+                        <img src="YOUR-NEW-REFERENCE.jpg" alt="Reference Photo Description">
+                        <div class="image-label">Ref</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="YOUR-NEW-SKETCH.jpg" alt="Sketch Description">
+                        <div class="image-label">Sketch</div>
+                    </div>
+                </div>
+                <h3>New Artwork Title</h3>
+                <p>Medium used / artwork descriptions here</p>
+            </div>
+            
         <a href="https://forms.gle/Ah9tz4hYfQwhcbgY7" target="_blank" class="comment-trigger-btn">💬 Comment on my art. Or leave a suggestion below!</a>
 
             
