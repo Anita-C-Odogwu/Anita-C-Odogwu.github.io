@@ -17,37 +17,47 @@
     
     <!-- Gallery Grid Specific Layout Styling -->
     <style>
-        .gallery-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; text-align: center; width: 100%; box-sizing: border-box; }
+        /* Forces the main container out of the narrow central tube */
+        .gallery-section { 
+            padding: 40px 20px; 
+            max-width: 1200px !important; /* Opens up the page width */
+            width: 90% !important;
+            margin: 0 auto; 
+            text-align: center; 
+            box-sizing: border-box; 
+        }
         .gallery-title { font-family: 'Cinzel', serif; color: #7a3b5c; margin-bottom: 30px; font-size: 2.5rem; }
         
-        /* Columns Layout: Lets drawings keep their natural, gorgeous heights */
+        /* Clean responsive layout columns across the screen space */
         .gallery-grid { 
-            column-count: 3;
-            column-gap: 25px;
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+            gap: 30px !important;
             width: 100% !important;
             margin-top: 20px !important;
         }
         
-        /* Individual Art Card Container */
+        /* Art Card structure: removes tight width constraints */
         .art-card { 
             background: #fff !important; 
-            padding: 15px !important; 
+            padding: 18px !important; 
             border-radius: 8px !important; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; 
             border: 1px solid #f0e6eb !important; 
-            display: inline-block !important; /* Prevents card breaking across columns */
-            width: 100% !important;
-            margin-bottom: 25px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important; 
+            max-width: 100% !important;
             box-sizing: border-box !important;
             text-align: center;
         }
         
-        /* Normal, Un-shrunk Image Sizes */
+        /* Lets your linework grow naturally without weird horizontal cropping */
         .art-card img { 
             width: 100% !important; 
-            height: auto !important; /* Dynamic natural scaling */
-            max-height: 500px !important; /* Safeguard so images don't get massive */
-            object-fit: contain !important; /* Shows the ENTIRE drawing, no cropping */
+            height: auto !important; 
+            max-height: 400px !important; /* Keeps taller images under control safely */
+            object-fit: contain !important; /* Displays the drawing fully without squishing */
             border-radius: 4px !important; 
             display: block !important; 
             cursor: pointer !important;
@@ -66,10 +76,10 @@
         /* Footer Styling */
         footer { margin-top: 60px; text-align: center; padding: 20px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: #fff; border-top: 1px dashed rgba(255,255,255,0.2); }
 
-        /* Comparison container layout */
+        /* Flexible side-by-side comparative frames */
         .comparison-container {
             display: flex !important;
-            gap: 10px !important;
+            gap: 12px !important;
             margin-bottom: 5px !important;
             width: 100% !important;
             height: auto !important;
@@ -95,7 +105,7 @@
             pointer-events: none !important;
         }
 
-        /* Lightbox pop-up screen overlay specifications */
+        /* Lightbox modal zoom viewing platform rules */
         .lightbox-overlay {
             position: fixed !important;
             z-index: 9999 !important;
@@ -134,13 +144,8 @@
             user-select: none !important;
         }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 900px) {
-            .gallery-grid { column-count: 2; }
-        }
         @media (max-width: 600px) {
-            .gallery-grid { column-count: 1; }
-            .comparison-container { flex-direction: row !important; }
+            .comparison-container { flex-direction: column !important; }
         }
     </style>
 </head>
