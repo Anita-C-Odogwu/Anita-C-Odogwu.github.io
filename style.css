@@ -120,7 +120,7 @@ html { scroll-behavior: smooth; }
 .back-to-top {
     position: fixed; bottom: 30px; right: 30px; display: none; background: #7a3b5c;
     color: #ffffff; border: none; width: 50px; height: 50px; border-radius: 50%;
-    font-size: 1.5rem; font-weight: bold; cursor: pointer; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem; font-weight: bold; cursor: pointer; box-shadow: 0 6px 166px rgba(0, 0, 0, 0.3);
     z-index: 1000; transition: background 0.2s, transform 0.2s;
 }
 .back-to-top:hover { background: #2c1a30; transform: scale(1.1); }
@@ -130,3 +130,31 @@ html { scroll-behavior: smooth; }
 }
 
 footer { text-align: center; padding: 20px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; color: #fff; }
+
+/* 🌟 PRECISE MASONRY FIX FOR GALLERY PAGE 🌟 */
+.gallery-grid {
+    display: block !important;
+    column-count: 3 !important;
+    column-gap: 30px !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+}
+
+.art-card {
+    background: #fff !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+    border: 1px solid #f0e6eb !important;
+    display: inline-block !important; /* Crucial: Stops cards from breaking across columns */
+    width: 100% !important;
+    margin-bottom: 30px !important; /* Tight spacing between rows */
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid { column-count: 2 !important; }
+}
+@media (max-width: 600px) {
+    .gallery-grid { column-count: 1 !important; }
+}
