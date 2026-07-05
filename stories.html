@@ -13,7 +13,7 @@
         /* Dark & Moody Atmospheric Background */
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            padding: 50px 20px; 
+            padding: 50px 20px 100px 20px; /* Extra bottom padding so text clears the button */
             max-width: 700px; 
             margin: auto; 
             background: linear-gradient(135deg, #0d0a0d 0%, #141115 100%); 
@@ -128,13 +128,29 @@
             border-radius: 0 8px 8px 0;
         }
 
-        /* Sleek Footer Comment Setup */
-        .comment-title {
-            font-size: 1.3rem; 
-            font-weight: 600; 
-            margin: 0 0 25px 0; 
-            color: #ffffff;
-            letter-spacing: -0.2px;
+        /* Clever Sticky Floating Comment Button */
+        .floating-comment-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #4e0547;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 20px rgba(78, 5, 71, 0.4);
+            border: 1px solid rgba(211, 105, 203, 0.3);
+            transition: all 0.3s ease;
+            z-index: 9999;
+        }
+
+        .floating-comment-btn:hover {
+            background-color: #730b69;
+            box-shadow: 0 6px 25px rgba(211, 105, 203, 0.5);
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -164,25 +180,10 @@
         <p>I dropped to my knees and howled to the moon.</p>
     </article>
 
-    <hr>
-
-    <!-- Sleek & Minimal Comment Section -->
-    <section style="text-align: center; margin-bottom: 40px;">
-        <h3 class="comment-title">Leave a Comment</h3>
-        
-        <!-- EMBEDDED GOOGLE FORM (Blends into Dark Layout) -->
-        <div style="width: 100%; max-width: 500px; margin: 0 auto; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmTjfAjX9xFQpxhPGRl8i1oNw5AZAtzOqq1y37YNjMCr06oA/viewform?embedded=true"
-                    width="100%" 
-                    height="840" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0"
-                    style="border: none; background: #ffffff;">
-                Loading…
-            </iframe>
-        </div>
-    </section>
+    <!-- FLOATING COMMENT BUTTON (Stays pinned in corner as you add more stories) -->
+    <a href="https://forms.gle/xb9U3zkfffdokcWC7" target="_blank" class="floating-comment-btn">
+        💬 Leave Feedback
+    </a>
 
 </body>
 </html>
