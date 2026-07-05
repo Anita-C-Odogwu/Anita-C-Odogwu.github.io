@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anita C. Odogwu - Short Stories</title>
     <style>
+        /* Smooth scrolling layout feature */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Base styles */
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -13,7 +18,7 @@
             margin: auto; 
             background: #fafafa; 
             color: #222; 
-            line-height: 1.7;
+            line-height: 1.8;
         }
         
         .back-btn { 
@@ -22,6 +27,19 @@
             text-decoration: none; 
             color: #666; 
             font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .back-btn:hover {
+            color: #4e0547;
+        }
+
+        /* Header Flair */
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #111;
         }
 
         /* Vertically Centered Work Directory / Nav Bar */
@@ -30,82 +48,66 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 14px;
             margin: 40px 0 60px 0;
             text-align: center;
         }
 
         .directory-title {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #888;
+            letter-spacing: 3px;
+            color: #999;
             margin-bottom: 5px;
         }
 
         .work-link {
-            color: #000;
+            color: #333;
             text-decoration: none;
             font-size: 1.15rem;
             font-weight: 500;
-            padding: 4px 10px;
-            transition: color 0.2s ease;
+            padding: 4px 12px;
+            border-radius: 6px;
+            transition: all 0.25s ease;
         }
 
+        /* Hover animation flair */
         .work-link:hover {
-            color: #666;
-            text-decoration: underline;
+            color: #4e0547;
+            background: #4e05470a;
+            transform: translateY(-1px);
         }
 
-        /* Divider lines */
+        /* Elegant divider lines matching your purple tone */
         hr {
             border: 0;
             height: 1px;
-            background: #e0e0e0;
-            margin: 40px 0;
+            background: linear-gradient(to right, transparent, #4e054733, transparent);
+            margin: 50px 0;
         }
 
         /* Content areas */
         .story { 
             margin-bottom: 60px; 
+            font-size: 1.1rem;
+            color: #333;
         }
         
         .story h2 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        /* Smart Google Forms Comment Box Section */
-        .comment-section {
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 80px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-        }
-
-        .comment-section h3 {
-            margin-top: 0;
-            font-size: 1.4rem;
-        }
-
-        .comment-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 28px;
-            background-color: #222;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 30px;
+            font-size: 1.9rem;
+            color: #4e0547;
+            margin-bottom: 20px;
             font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: background-color 0.2s ease;
+            letter-spacing: -0.5px;
         }
 
-        .comment-btn:hover {
-            background-color: #444;
+        /* Sleek & Minimal Comment Section */
+        .comment-title {
+            font-size: 1.2rem; 
+            font-weight: 600; 
+            margin: 0 0 20px 0; 
+            color: #222;
+            letter-spacing: -0.2px;
         }
     </style>
 </head>
@@ -128,38 +130,34 @@
     <!-- Story 1 -->
     <article id="story1" class="story">
         <h2>Ashes and Silence</h2>
-        <p>
-Empty: the room. Empty: the house. Empty: my heart.
-Three months earlier, I had a vision: fireless smoke swallowing her house. The next day it stood untouched; I told myself I was hallucinating.
-A week later, flames took it. I shoulder-barged the door. She lay in her bed, peaceful, untouched by heat.
-Only when they carried her out did she burn—down to ash.
-They dropped her stretcher in horror and I shrieked as her ashes blew and danced in the wind amongst the leaves. The wind whistled her name in my ear and then three words that chilled my spine.
-Leave. This. Place.
-I dropped to my knees and howled to the moon.
-</p>
+        <p>Empty: the room. Empty: the house. Empty: my heart.</p>
+        <p>Three months earlier, I had a vision: fireless smoke swallowing her house. The next day it stood untouched; I told myself I was hallucinating.</p>
+        <p>A week later, flames took it. I shoulder-barged the door. She lay in her bed, peaceful, untouched by heat.</p>
+        <p>Only when they carried her out did she burn—down to ash.</p>
+        <p>They dropped her stretcher in horror and I shrieked as her ashes blew and danced in the wind amongst the leaves. The wind whistled her name in my ear and then three words that chilled my spine.</p>
+        <p style="font-style: italic; font-weight: 600; color: #4e0547; letter-spacing: 1px; padding-left: 10px; border-left: 2px solid #4e0547;">Leave. This. Place.</p>
+        <p>I dropped to my knees and howled to the moon.</p>
     </article>
 
     <hr>
 
-<!-- Smart Embedded Google Forms Comment System -->
-<section class="comment-section">
-    <h3>Leave a Comment or Feedback</h3>
-    <p style="color: #d3cad10f; font-size: 0.95rem; margin-bottom: 25px;">Have thoughts on my writing? Submit your feedback directly below!</p>
-    
-    <!-- EMBEDDED GOOGLE FORM -->
-    <div style="width: 100%; overflow: hidden; border-radius: 8px;">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmTjfAjX9xFQpxhPGRl8i1oNw5AZAtzOqq1y37YNjMCr06oA/viewform?embedded=true" 
-                width="100%" 
-                height="920" 
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0"
-                style="border: none; background: #fff;">
-            Loading…
-        </iframe>
-    </div>
-</section>
-
+    <!-- Sleek & Minimal Comment Section -->
+    <section style="text-align: center; margin-bottom: 40px;">
+        <h3 class="comment-title">Leave a Comment</h3>
+        
+        <!-- EMBEDDED GOOGLE FORM (Sleek & Fluid Width) -->
+        <div style="width: 100%; max-width: 500px; margin: 0 auto; overflow: hidden; border-radius: 6px;">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmTjfAjX9xFQpxhPGRl8i1oNw5AZAtzOqq1y37YNjMCr06oA/viewform?embedded=true" 
+                    width="100%" 
+                    height="840" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    style="border: none; background: transparent;">
+                Loading…
+            </iframe>
+        </div>
+    </section>
 
 </body>
 </html>
