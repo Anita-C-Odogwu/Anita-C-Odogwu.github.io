@@ -293,6 +293,28 @@
     <a href="https://forms.gle/xb9U3zkfffdokcWC7" target="_blank" class="floating-comment-btn">
         💬 Leave Feedback
     </a>
+    <button id="scrollTopButton" title="Go to top">↑</button>
+    
+<script>
+  // Using the new unique variable and ID name
+  const customScrollBtn = document.getElementById("scrollTopButton");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      customScrollBtn.style.display = "block";
+    } else {
+      customScrollBtn.style.display = "none";
+    }
+  };
+
+  customScrollBtn.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
 </body>
 </html>
 
