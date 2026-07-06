@@ -633,7 +633,7 @@ It is a signature of our future.
         <p class="warning-text">No part of this poetry collection may be copied or reproduced without permission.</p>
     </footer>
 
-    <!-- Back to Top Button -->
+       <!-- Back to Top Button (Safely on Left Side) -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
     <!-- Scripts -->
@@ -675,7 +675,10 @@ It is a signature of our future.
         button.innerHTML = "🛑 Stop";
         window.speechSynthesis.speak(utterance);
     }
+    </script> <!-- This closes the audio script safely so your carousel works -->
 
+    <!-- Back to Top Scroll Logic -->
+    <script>
     const backToTopButton = document.getElementById("backToTop");
 
     window.onscroll = function () {
