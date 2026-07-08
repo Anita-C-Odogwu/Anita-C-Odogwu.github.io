@@ -10,11 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(nextBtn);
 
     let currentIndex = 0;
+function showPoem(nextIndex) {
+    currentIndex = (nextIndex + poems.length) % poems.length;
 
-    function showPoem(nextIndex) {
-        console.log("Current:", currentIndex);
-console.log("Going to:", nextIndex);
-
+    poems.forEach((poem, index) => {
+        if (index === currentIndex) {
+            poem.classList.add("active");
+        } else {
+            poem.classList.remove("active");
+        }
+    });
+}
 poems[currentIndex].classList.remove("active");
 
 currentIndex = (nextIndex + poems.length) % poems.length;
